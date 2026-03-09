@@ -6,11 +6,18 @@ def final_record(home_team, teams) :
     wins = results.count("W")
     losses = results.count("L")
     total = len(results)
+    winning_percentage = wins / total * 100
 
     print(f"\nFinal Results for {home_team}")
     print(f"Wins: {wins}")
     print(f"Losses: {losses}")
-    print(f"Winning Percentage: {wins / total * 100:.2f}%")
+    print(f"Winning Percentage: {winning_percentage:.2f}%")
+    if (winning_percentage >= 75) :
+        print("NCAA Tournament bound!")
+    elif (winning_percentage >= 50) :
+        print("Good season!")
+    else :
+        print("Back to practice!")
 
 # teams = {
 #         "BYU": ["W", "L", "W"],
