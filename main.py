@@ -12,16 +12,15 @@ introduction()
 bContinue = True
 # keep presenting the menu after function calls until user chooses to quit
 while bContinue :
-# call functions in order
+# call functions based on user selection
     user_choice = display_menu()
     if (user_choice == 1) :
-        pick_teams()
-        play_game()
-        #final_record()
+        teams = pick_teams()
+        game_results = play_game(teams)
+        final_record(teams[0], game_results)
     elif (user_choice == 2) :
         introduction() 
-        # display_menu()
-        # not sure if this is what goes here but it is a placeholder for now
     else :
         print("Thank you for playing!")
+        # break the loop
         bContinue = False

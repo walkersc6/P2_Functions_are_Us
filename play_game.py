@@ -42,3 +42,5 @@ def play_game(lstTeams):
         print('L')
         teamRecords[homeTeam][1] += 1
         teamRecords[awayTeam][0] += 1
+
+    return teamRecords
